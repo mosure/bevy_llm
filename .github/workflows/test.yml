@@ -31,10 +31,10 @@ jobs:
         toolchain: ${{ matrix.rust-toolchain }}
 
     - name: lint
-      run: cargo clippy -- -Dwarnings
+      run: cargo clippy --all -- -Dwarnings
 
     - name: build
-      run: cargo build --example=minimal
+      run: cargo build --all
 
     # - name: build (web)
     #   run: cargo build --example=minimal --target wasm32-unknown-unknown --release
